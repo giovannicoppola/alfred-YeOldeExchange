@@ -138,8 +138,8 @@ Edit `currency_converter.py` to change:
 
 ## 📄 License
 
-This workflow is based on the historical currency converter script and is provided for educational purposes.
-Icons from flaticon.com
+- This workflow is based on the historical currency converter script and is provided for educational purposes.
+- Icons from flaticon.com
 
 ## 🔧 Version
 
