@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.giovanni.yeoldeexchange</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>1E8B8F7C-8C4A-4B2E-9D3F-5A6B7C8D9E0F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2F9C0E1D-3A5B-4C7E-8F0A-1B2C3D4E5F6A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>giovanni</string>
+	<key>description</key>
+	<string>Convert historical UK currency (pounds/shillings/pence) to modern values and show purchasing power</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Ye Olde Exchange</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2F9C0E1D-3A5B-4C7E-8F0A-1B2C3D4E5F6A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>yeolde</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Converting historical currency...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>currency_converter.py</string>
+				<key>subtext</key>
+				<string>Enter: pounds shillings pence year (e.g., "5 10 6 1850")</string>
+				<key>title</key>
+				<string>Historical UK Currency Converter</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1E8B8F7C-8C4A-4B2E-9D3F-5A6B7C8D9E0F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Historical UK Currency Converter
+
+Usage: Type `yeolde` followed by 4 numbers:
+- pounds (0-999)
+- shillings (0-19) 
+- pence (0-11)
+- year (1270-2017)
+
+Example: currency 5 10 6 1850
+
+This will convert £5 10s 6d from 1850 to modern equivalent and show purchasing power.
+![](screenshot.png)</string>
+	<key>uidata</key>
+	<dict>
+		<key>1E8B8F7C-8C4A-4B2E-9D3F-5A6B7C8D9E0F</key>
+		<dict>
+			<key>xpos</key>
+			<real>100</real>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+		<key>2F9C0E1D-3A5B-4C7E-8F0A-1B2C3D4E5F6A</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.1</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
