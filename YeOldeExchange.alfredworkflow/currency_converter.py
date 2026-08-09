@@ -95,8 +95,9 @@ def parse_input(query):
 def call_converter(pounds, shillings, pence, year):
     """Call the docopt currency converter script"""
     try:
-        # Get the path to the original script
-        script_path = 'uk_currency_converter_docopt.py'
+        # Get the path to the backend script (relative to THIS file, not the cwd —
+        # the converter fails if Alfred runs the script filter from another directory)
+        script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uk_currency_converter_docopt.py')
         
         debug_log(f"Script path: {script_path}")
         debug_log(f"Script exists: {os.path.exists(script_path)}")

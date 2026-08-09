@@ -143,4 +143,7 @@ Edit `currency_converter.py` to change:
 
 ## 🔧 Version
 
-**0.0.1** - Initial release with full conversion and purchasing power features 
+**0.0.1** - Initial release with full conversion and purchasing power features
+
+# Changelog
+- 2026-07-21: version 0.0.2, fixed the backend script path so conversion works regardless of the launch directory

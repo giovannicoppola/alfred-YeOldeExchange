@@ -136,7 +136,7 @@ This will convert £5 10s 6d from 1850 to modern equivalent and show purchasing 
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.0.2</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
