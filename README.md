@@ -2,6 +2,11 @@
 
 A powerful Alfred workflow for converting historical UK currency to modern values and calculating purchasing power.
 
+<a href="https://github.com/giovannicoppola/alfred-YeOldeExchange/releases/latest/">
+<img alt="Downloads"
+src="https://img.shields.io/github/downloads/giovannicoppola/alfred-YeOldeExchange/total?color=purple&label=Downloads"><br/>
+</a>
+
 ## 🎯 What It Does
 
 Convert historical UK currency (pounds, shillings, pence) from any year between 1270-2017 to modern equivalent values, plus see what that money could buy in that historical period.
