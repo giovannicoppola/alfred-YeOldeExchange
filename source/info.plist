@@ -113,6 +113,8 @@ Usage: Type `yeolde` followed by 4 numbers:
 Example: `yeolde 5 10 6 1850` (also `£5 10s 6d 1850` or `5/10/6 1850`)
 
 This will convert £5 10s 6d from 1850 to modern equivalent and show purchasing power.
+Born in the [WhoWasWhen thread](https://www.alfredforum.com/topic/23244-introducing-whowaswhen-%F0%9F%91%91/?do=findComment&amp;comment=121761) on the Alfred Forum.
+
 ![](screenshot.png)</string>
 	<key>uidata</key>
 	<dict>

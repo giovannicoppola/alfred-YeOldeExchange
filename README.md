@@ -39,8 +39,13 @@ Before 1971: **£1 = 20 shillings (s)** and **1 shilling = 12 pence (d)**, so £
 ## About the numbers
 
 Inflation multipliers and historical prices are approximations interpolated from published
-series (in the spirit of the National Archives' currency converter), not an official dataset.
+series (in the spirit of the [National Archives' currency converter](https://www.nationalarchives.gov.uk/currency-converter/)), not an official dataset.
 Treat them as an educational ballpark. No network access is needed.
+
+## Background
+
+Born in the [WhoWasWhen thread](https://www.alfredforum.com/topic/23244-introducing-whowaswhen-%F0%9F%91%91/?do=findComment&comment=121761) on the Alfred Forum, where a reader wished the
+National Archives' currency converter were a workflow.
 
 ## Credits
 
