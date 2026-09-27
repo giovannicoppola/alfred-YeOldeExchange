@@ -1,154 +1,54 @@
-# Ye Olde Exchange - Alfred Workflow
+# Ye Olde Exchange 💷
 
-A powerful Alfred workflow for converting historical UK currency to modern values and calculating purchasing power.
+An [Alfred](https://www.alfredapp.com/) workflow that converts an old UK amount in pounds,
+shillings and pence from any year between 1270 and 2017 into its modern value, and shows what
+it would have bought at the time.
 
 <a href="https://github.com/giovannicoppola/alfred-YeOldeExchange/releases/latest/">
 <img alt="Downloads"
 src="https://img.shields.io/github/downloads/giovannicoppola/alfred-YeOldeExchange/total?color=purple&label=Downloads"><br/>
 </a>
 
-## 🎯 What It Does
+![](source/screenshot.png)
 
-Convert historical UK currency (pounds, shillings, pence) from any year between 1270-2017 to modern equivalent values, plus see what that money could buy in that historical period.
+## Installation
 
+Download the latest `.alfredworkflow` from [Releases](https://github.com/giovannicoppola/alfred-YeOldeExchange/releases/latest)
+and double-click it. Requires Alfred with the Powerpack and Python 3 (`/usr/bin/python3`, which
+macOS installs with the Command Line Tools). Everything else is bundled.
 
+## Usage
 
-## 🚀 Usage
+Type `yeolde` followed by four numbers: **pounds** (0–999), **shillings** (0–19), **pence**
+(0–11) and **year** (1270–2017). `£5 10s 6d 1850` and `5/10/6 1850` work too.
 
-1. **Open Alfred:** Press ⌘ + Space (or your configured hotkey)
+| Query | Result |
+|---|---|
+| `yeolde 5 10 6 1850` | £5 10s 6d in 1850 = £442.00 in 2017 (80.0x inflation) |
+| `yeolde 1 0 0 1600` | £1 0s 0d in 1600 = £200.00 in 2017 (200.0x inflation) |
+| `yeolde 2 5 8 1400` | £2 5s 8d in 1400 = £1,370.00 in 2017 (600.0x inflation) |
 
-2. **Type the command:** `yeolde` followed by 4 numbers:
-   - **Pounds** (0-999)
-   - **Shillings** (0-19) 
-   - **Pence** (0-11)
-   - **Year** (1270-2017)
+The first row is the conversion; the rows below show what the amount bought in that year —
+horses, cows, sheep, pigs, quarters of wheat, stones of wool, loaves of bread and gallons of
+ale. <kbd>↩</kbd> copies any row.
 
-### Examples
+### Pre-decimal money
 
-```
-yeolde 5 10 6 1850
-```
-Converts £5 10s 6d from 1850
-- Result: £442.00 in 2017 money (80x inflation)
-- Could buy: horses, cows, sheep, etc.
+Before 1971: **£1 = 20 shillings (s)** and **1 shilling = 12 pence (d)**, so £1 = 240d.
 
-```
-yeolde 1 0 0 1600
-```
-Converts £1 from 1600
-- Result: £200.00 in 2017 money (200x inflation)
+## About the numbers
 
-```
-yeolde 2 5 8 1400
-```
-Converts £2 5s 8d from 1400
+Inflation multipliers and historical prices are approximations interpolated from published
+series (in the spirit of the National Archives' currency converter), not an official dataset.
+Treat them as an educational ballpark. No network access is needed.
 
-## 📊 Output
+## Credits
 
-The workflow shows multiple results:
-
-1. **💰 Main Conversion**
-   - Original amount → Modern equivalent
-   - Inflation multiplier
-
-2. **🛒 Purchasing Power Summary**
-   - What the money could buy (top items)
-
-3. **📝 Individual Items**
-   - Specific quantities of historical goods
-   - Horses, cows, sheep, pigs, wheat, wool, bread, ale
-
-4. **📋 Copy to Clipboard**
-   - Press Enter on any result to copy it
-
-## 💡 Understanding the Results
-
-### Currency System (Pre-1971)
-- **1 pound (£)** = 20 shillings (s)
-- **1 shilling** = 12 pence (d)
-- **Total:** 1 pound = 240 pence
-
-### Historical Items Include:
-- **Animals:** Horses, cows, sheep, pigs
-- **Commodities:** Quarters of wheat, stones of wool
-- **Daily goods:** Loaves of bread, gallons of ale
-
-### Example Output:
-```
-£5 10s 6d in 1850 = £442.00 in 2017 (80.0x inflation)
-Could buy: 0.28 horses OR 0.46 cows OR 3.7 sheep
-```
-
-## ⚙️ Technical Details
-
-### Files in Workflow:
-- `info.plist` - Alfred workflow configuration
-- `currency_converter.py` - Main Alfred interface script
-- `uk_currency_converter_docopt.py` - Core conversion engine
-- `README.md` - Documentation
-
-### Requirements:
-- **Alfred 4+** with Powerpack
-- **Python 3** (usually pre-installed on macOS)
-- **docopt package** (`pip3 install --user --break-system-packages docopt`)
-
-### Data Sources:
-- Historical inflation data approximations
-- Archaeological and historical price records
-- National Archives methodologies
-
-## 🐛 Troubleshooting
-
-### "No module named 'docopt'" Error:
-```bash
-pip3 install --user --break-system-packages docopt
-```
-
-### "Invalid Input" Messages:
-- Check that you're entering exactly 4 numbers
-- Verify ranges: pounds (0-999), shillings (0-19), pence (0-11), year (1270-2017)
-
-### Workflow Not Appearing:
-- Make sure Alfred Powerpack is installed
-- Check Alfred Preferences → Workflows tab
-- Verify Python 3 is accessible in Terminal
-
-### Permission Issues:
-```bash
-cd YeOldeExchange.alfredworkflow
-chmod +x currency_converter.py uk_currency_converter_docopt.py
-```
-
-## 📚 Historical Context
-
-This tool uses approximated historical data. The actual National Archives maintains more precise datasets, but these approximations provide educational insights into:
-
-- **Medieval economy** (1270-1500): Very high inflation multipliers
-- **Early modern period** (1500-1700): Gradual price changes  
-- **Industrial revolution** (1700-1900): Significant economic shifts
-- **Modern era** (1900-2017): Accelerating inflation
-
-## 🎨 Customization
-
-### Adding an Icon:
-1. Create a 512x512 PNG icon
-2. Save as `icon.png` in the workflow folder
-3. Reimport the workflow
-
-### Modifying Output Format:
-Edit `currency_converter.py` to change:
-- Number of items shown
-- Formatting of results
-- Additional purchasing power calculations
-
-## 📄 License
-
-- This workflow is based on the historical currency converter script and is provided for educational purposes.
-- Icons from flaticon.com
-
-## 🔧 Version
-
-**0.0.1** - Initial release with full conversion and purchasing power features
+Icons from [flaticon.com](https://www.flaticon.com/).
 
 # Changelog
+- 2026-09-27: version 0.1.0, one process per keystroke (the converter is imported, not spawned),
+  result order no longer reshuffled by Alfred, readable item names, `£5 10s 6d` and `5/10/6`
+  input accepted, clearer prompts; repo reorganised under `source/`
 - 2026-07-21: version 0.0.2, fixed the backend script path so conversion works regardless of the launch directory
+- 2025-07-08: version 0.0.1, initial release

@@ -110,7 +110,7 @@ Usage: Type `yeolde` followed by 4 numbers:
 - pence (0-11)
 - year (1270-2017)
 
-Example: currency 5 10 6 1850
+Example: `yeolde 5 10 6 1850` (also `£5 10s 6d 1850` or `5/10/6 1850`)
 
 This will convert £5 10s 6d from 1850 to modern equivalent and show purchasing power.
 ![](screenshot.png)</string>
@@ -136,7 +136,7 @@ This will convert £5 10s 6d from 1850 to modern equivalent and show purchasing 
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.2</string>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>

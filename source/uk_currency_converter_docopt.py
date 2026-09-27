@@ -49,7 +49,6 @@ import csv
 import sys
 from datetime import datetime
 from typing import Dict, Tuple, Optional, List
-from docopt import docopt
 
 __version__ = "1.0.0"
 
@@ -645,6 +644,9 @@ def run_interactive_mode(converter):
             break
 
 def main():
+    # imported here so the Alfred front-end, which only uses the converter
+    # class, never loads docopt
+    from docopt import docopt
     """Main entry point"""
     args = docopt(__doc__, version=f"UK Historical Currency Converter {__version__}")
     
